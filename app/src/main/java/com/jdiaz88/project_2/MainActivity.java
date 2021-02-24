@@ -53,5 +53,16 @@ public class MainActivity extends AppCompatActivity {
         songList.add(new Song("Are You Bored Yet?(feat. Clairo)","Wallows,Clairo","","#"));
         songList.add(new Song("After the Storm","Tyler the Creator, Kali Uchis","","#"));
         songList.add(new Song("Photosynthesis","Saba, Jean Deaux","","#"));
+        songList.add(new Song("CYANIDE","Daniel Caesar","","#"));
+        songList.add(new Song("The Spins","Mac Miller","","#"));
+        songList.add(new Song("Chronic Sunshine","Cosmo Pyke","","#"));
     }
 }
+
+
+
+
+
+// Song Image Resources
+//https://www.google.com/url?sa=i&url=https%3A%2F%2Fgenius.com%2FDaniel-caesar-cyanide-lyrics&psig=AOvVaw2rLIjTfugsWJRuUwd9aYDr&ust=1614294954885000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLjMpL3Tg-8CFQAAAAAdAAAAABAD
+//https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FK.I.D.S._(mixtape)&psig=AOvVaw2BK0qI_HdwBkz-iCECXrVh&ust=1614295165978000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLDNtaLUg-8CFQAAAAAdAAAAABAD

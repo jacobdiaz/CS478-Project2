@@ -13,7 +13,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
     private ArrayList<Song> songList;
 
     // index of images array corresponds to order/position it is explicitly generated in MainActivity
-    private int[] images = { R.drawable.power, R.drawable.chanel, R.drawable.ten, R.drawable.areyouboredyet, R.drawable.afterthestorm,R.drawable.photo};
+    private int[] images = { R.drawable.power, R.drawable.chanel, R.drawable.ten, R.drawable.areyouboredyet, R.drawable.afterthestorm,R.drawable.photo,R.drawable.cyanide, R.drawable.thespins, R.drawable.chronicsunshine};
 
     public SongAdapter(ArrayList<Song> songList){
         this.songList = songList;
