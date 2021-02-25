@@ -7,11 +7,15 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SongAdapter.songClickedListener {
     private ArrayList<Song> songList;
     private RecyclerView songRecyclerView;
 
@@ -33,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupAdapter(){
         // Instantiate adapter
-        SongAdapter sAdapter = new SongAdapter(songList);
+        SongAdapter sAdapter = new SongAdapter(songList,this::onSongClicked);
 
         // Set up layout manager
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         songRecyclerView.setAdapter(sAdapter);
     }
 
+    // TODO change the shape of Song object so it doesn't use album cover path
     private void generateSongList(){
         songList.add(new Song("Power","Kanye West","","#"));
         songList.add(new Song("Chanel","Frank Ocean","","#"));
@@ -56,6 +61,14 @@ public class MainActivity extends AppCompatActivity {
         songList.add(new Song("CYANIDE","Daniel Caesar","","#"));
         songList.add(new Song("The Spins","Mac Miller","","#"));
         songList.add(new Song("Chronic Sunshine","Cosmo Pyke","","#"));
+    }
+
+    @Override
+    public void onSongClicked(int position) {
+        final Song clickedSong = songList.get(position);
+        Log.d("clickedSong","Clicked "+clickedSong.getSongTitle()+" ");
+        // Navigate to a new activity
+//        Intent i = new Intent(this,newactivity.class)
     }
 }
 
