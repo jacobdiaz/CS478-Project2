@@ -3,13 +3,16 @@ package com.jdiaz88.project_2;
 public class Song {
     private String songTitle;
     private String artistName;
-    private String songUrl;
+    private String youTubeURL;
+    private String wikiUrl;
 
 
-    public Song(String songTitle, String artistName,String songUrl){
+
+    public Song(String songTitle, String artistName,String youTubeURL, String wikiUrl){
         this.songTitle = songTitle;
         this.artistName = artistName;
-        this.songUrl = songUrl;
+        this.youTubeURL = youTubeURL;
+        this.wikiUrl = wikiUrl;
     }
 
 
@@ -21,8 +24,10 @@ public class Song {
         return songTitle;
     }
 
-    public String getSongUrl() {
-        return songUrl;
+    public String getYouTubeURL() {
+        return youTubeURL;
     }
-
+    public String getWikiUrl() {
+        return wikiUrl;
+    }
 }
