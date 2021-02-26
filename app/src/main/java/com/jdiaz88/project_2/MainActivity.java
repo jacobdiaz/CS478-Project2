@@ -11,6 +11,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -32,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements SongAdapter.songC
 
         // Setup adapter for song list
         setupAdapter();
+
+        // Song Menu
+
     }
 
     private void setupAdapter(){
@@ -63,15 +68,11 @@ public class MainActivity extends AppCompatActivity implements SongAdapter.songC
 
     @Override
     public void onSongClicked(int position) {
-        final Song clickedSong = songList.get(position);
-        Log.d("clickedSong","Clicked "+clickedSong.getYouTubeURL()+" ");
-//        // Navigate to a new activity
-//        Intent i = new Intent(Intent.ACTION_VIEW);
-//        i.setData((Uri.parse(clickedSong.getSongUrl())));
-//        startActivity(i);
-        Uri uri = Uri.parse(clickedSong.getYouTubeURL());
-        startActivity(new Intent(Intent.ACTION_VIEW,uri));
-
+//        final Song clickedSong = songList.get(position);
+//        Log.d("clickedSong","Clicked "+clickedSong.getYouTubeURL()+" ");
+//        Uri uri = Uri.parse(clickedSong.getYouTubeURL());
+//        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+        Toast.makeText( getApplicationContext(),"Long click a song to open menu!",Toast.LENGTH_SHORT).show();
     }
 }
 // Song Image Resources
