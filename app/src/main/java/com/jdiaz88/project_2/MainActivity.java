@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements SongAdapter.songClickedListener {
+public class MainActivity extends AppCompatActivity {
     private ArrayList<Song> songList;
     private RecyclerView songRecyclerView;
 
@@ -35,13 +35,12 @@ public class MainActivity extends AppCompatActivity implements SongAdapter.songC
         // Setup adapter for song list
         setupAdapter();
 
-        // Song Menu
-
+        //F
     }
 
     private void setupAdapter(){
         // Instantiate adapter
-        SongAdapter sAdapter = new SongAdapter(songList,this::onSongClicked);
+        SongAdapter sAdapter = new SongAdapter(songList);
 
         // Set up layout manager
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -64,15 +63,6 @@ public class MainActivity extends AppCompatActivity implements SongAdapter.songC
         songList.add(new Song("CYANIDE","Daniel Caesar","https://www.youtube.com/watch?v=09J5ttP2YDM","https://en.wikipedia.org/wiki/Case_Study_01"));
         songList.add(new Song("The Spins","Mac Miller","https://www.youtube.com/watch?v=mkGT1c98soU","https://en.wikipedia.org/wiki/Mac_Miller"));
         songList.add(new Song("Chronic Sunshine","Cosmo Pyke","https://www.youtube.com/watch?v=iOSSAQPt-Ro","https://en.wikipedia.org/wiki/Cosmo_Pyke"));
-    }
-
-    @Override
-    public void onSongClicked(int position) {
-//        final Song clickedSong = songList.get(position);
-//        Log.d("clickedSong","Clicked "+clickedSong.getYouTubeURL()+" ");
-//        Uri uri = Uri.parse(clickedSong.getYouTubeURL());
-//        startActivity(new Intent(Intent.ACTION_VIEW,uri));
-        Toast.makeText( getApplicationContext(),"Long click a song to open menu!",Toast.LENGTH_SHORT).show();
     }
 }
 // Song Image Resources

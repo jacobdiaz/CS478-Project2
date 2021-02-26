@@ -17,34 +17,23 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
     // index of images array corresponds to order/position it is explicitly generated in MainActivity
     private int[] images = { R.drawable.power, R.drawable.chanel, R.drawable.ten, R.drawable.areyouboredyet, R.drawable.afterthestorm,R.drawable.photo,R.drawable.cyanide, R.drawable.thespins, R.drawable.chronicsunshine};
 
-    private songClickedListener scListener;
-
-    public SongAdapter(ArrayList<Song> songList ,songClickedListener scListener){
+    public SongAdapter(ArrayList<Song> songList ){
         this.songList = songList;
-        this.scListener = scListener;
     }
 
     // Create a viewholder
-    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class MyViewHolder extends RecyclerView.ViewHolder{
         private TextView songTitle;
         private TextView artistName;
         private ImageView albumCover;
 
-        songClickedListener songListener;
 
-
-        public MyViewHolder(final View view, songClickedListener songListener){
+        public MyViewHolder(final View view){
             super(view);
             // Linking the UI elements from song_item.xml
             songTitle = view.findViewById(R.id.song_title);
             artistName = view.findViewById(R.id.song_artist);
             albumCover = view.findViewById(R.id.album_cover);
-
-            // Set the listener
-            this.songListener = songListener;
-
-            // On Single Click
-            itemView.setOnClickListener(this);
 
             // On long click
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
@@ -55,11 +44,6 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
                 }
             });
         }
-
-        @Override
-        public void onClick(View v) {
-            songListener.onSongClicked(getAdapterPosition());
-        }
     }
 
 
@@ -68,7 +52,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
     public SongAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Inflate our view
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.song_item, parent, false);
-        return new MyViewHolder(itemView, scListener);
+        return new MyViewHolder(itemView);
     }
 
     @Override
@@ -87,10 +71,4 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyViewHolder> 
     public int getItemCount() {
         return songList.size();
     }
-
-
-    public interface songClickedListener{
-        void onSongClicked(int position);
-    }
-
 }
