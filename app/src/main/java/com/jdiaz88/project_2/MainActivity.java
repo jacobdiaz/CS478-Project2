@@ -11,16 +11,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-<<<<<<< HEAD
-<<<<<<< HEAD
 import android.widget.TextView;
 import android.widget.Toast;
-=======
 import android.view.View;
->>>>>>> parent of 2f48a95... Added wiki url to song object
-=======
 import android.view.View;
->>>>>>> parent of 2f48a95... Added wiki url to song object
 
 import java.util.ArrayList;
 
@@ -72,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
         songList.add(new Song("The Spins","Mac Miller","https://www.youtube.com/watch?v=mkGT1c98soU"));
         songList.add(new Song("Chronic Sunshine","Cosmo Pyke","https://www.youtube.com/watch?v=iOSSAQPt-Ro"));
     }
-<<<<<<< HEAD
-=======
+
 
     @Override
     public void onSongClicked(int position) {
@@ -87,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
 
     }
->>>>>>> parent of 2f48a95... Added wiki url to song object
 }
 // Song Image Resources
 //https://www.google.com/url?sa=i&url=https%3A%2F%2Fgenius.com%2FDaniel-caesar-cyanide-lyrics&psig=AOvVaw2rLIjTfugsWJRuUwd9aYDr&ust=1614294954885000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLjMpL3Tg-8CFQAAAAAdAAAAABAD
