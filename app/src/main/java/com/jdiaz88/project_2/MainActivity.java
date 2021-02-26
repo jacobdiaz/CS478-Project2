@@ -12,8 +12,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import android.widget.TextView;
 import android.widget.Toast;
+=======
+import android.view.View;
+>>>>>>> parent of 2f48a95... Added wiki url to song object
 =======
 import android.view.View;
 >>>>>>> parent of 2f48a95... Added wiki url to song object
